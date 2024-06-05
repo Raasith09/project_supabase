@@ -112,8 +112,9 @@ class _HomePageState extends State<HomePage> {
                                 );
                               } else {
                                 FocusManager.instance.primaryFocus?.unfocus();
-                                context.read<HomeBloc>().add(
-                                    DataPost(title.text, description.text));
+                                context.read<HomeBloc>().add(DataPost(
+                                    title.text.trim(),
+                                    description.text.trim()));
                               }
                             },
                             child: const Text("Submit")))

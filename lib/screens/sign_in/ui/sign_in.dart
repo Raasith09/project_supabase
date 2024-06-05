@@ -159,8 +159,8 @@ class _SignInState extends State<SignIn> {
                           );
                         } else {
                           context.read<AuthBloc>().add(AuthLoginRequested(
-                              email: email.text,
-                              password: password.text,
+                              email: email.text.trim(),
+                              password: password.text.trim(),
                               rememberPassword: isChecked));
                         }
                       },

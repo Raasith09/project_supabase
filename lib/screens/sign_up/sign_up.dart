@@ -106,9 +106,9 @@ class _SignUpState extends State<SignUp> {
                           );
                         } else {
                           context.read<AuthBloc>().add(AuthSignUpRequested(
-                              email: email.text,
-                              password: password.text,
-                              name: name.text));
+                              email: email.text.trim(),
+                              password: password.text.trim(),
+                              name: name.text.trim()));
                         }
                       },
                       child: Container(
